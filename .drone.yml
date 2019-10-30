@@ -19,3 +19,5 @@ steps:
   commands:
     - rustc main.rs
     - ./main
+
+    
