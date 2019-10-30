@@ -14,3 +14,4 @@ steps:
   image: rust:1.38-alpine3.10
   commands:
     - rustc main.rs
+    
