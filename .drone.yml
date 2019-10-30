@@ -1,0 +1,13 @@
+name: default
+
+kind: pipeline
+type: docker
+
+steps:
+- name: build
+  build: ./build
+  commands:
+    - make build
+
+- name: run
+  build: ./
