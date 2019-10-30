@@ -3,6 +3,10 @@ kind: pipeline
 type: docker
 name: default
 
+workspace:
+  base: /data/rust-tmp
+  path: .
+
 trigger:
   branch:
   - master
