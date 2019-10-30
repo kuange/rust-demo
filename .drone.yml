@@ -16,4 +16,4 @@ steps:
     - make build
 
 - name: run
-  build: ./
+  build: ./run
