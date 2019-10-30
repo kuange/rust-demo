@@ -11,6 +11,6 @@ trigger:
 
 steps:
 - name: build
-  image: rust:1.30
+  image: rust:1.38-alpine3.10
   commands:
     - rustc main.rs
