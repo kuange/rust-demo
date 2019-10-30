@@ -13,7 +13,7 @@ steps:
 - name: build
   build: ./build
   commands:
-    - make build
+    - rustc main.rs
 
 - name: run
   build: ./run
