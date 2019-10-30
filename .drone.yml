@@ -3,6 +3,12 @@ name: default
 kind: pipeline
 type: docker
 
+trigger:
+  branch:
+  - dev
+  event:
+  - push
+
 steps:
 - name: build
   build: ./build
