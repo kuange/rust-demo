@@ -30,7 +30,7 @@ steps:
     source: target/release/app
     rm: true
 
--- name: reload
+- name: reload
   image: appleboy/drone-ssh
   settings:
     host: 150.109.49.3
