@@ -17,5 +17,27 @@ steps:
 - name: build
   image: rust:1.38-alpine3.10
   commands:
-    - rustc main.rs
-    - ./main
+    - cargo build --release
+
+- name: scp
+  image: appleboy/drone-scp
+  settings:
+    host: 150.109.49.3
+    username: root
+    password:
+      from_secret: ssh_password
+    target: /data/app/scp
+    source: target/release/app
+    rm: true
+
+-- name: reload
+  image: appleboy/drone-ssh
+  settings:
+    host: 150.109.49.3
+    username: root
+    password:
+      from_secret: ssh_password
+  script:
+    - cp /data/app/scp/web /data/app/web
+    - /data/app/web
+
